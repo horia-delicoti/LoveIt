@@ -39,6 +39,18 @@
         </div>
     {{- end -}}
 
+    {{- with $profile.subtitle1 -}}
+        <div class="home-subtitle1">
+            {{- if $profile.typeit1 -}}
+                {{- $id := dict "Content" . "Scratch" $.Scratch | partial "function/id.html" -}}
+                <div id="{{ $id }}" class="typeit"></div>
+                {{- dict $id (slice $id) | dict "typeitMap" | merge ($.Scratch.Get "this") | $.Scratch.Set "this" -}}
+            {{- else -}}
+                {{- . | safeHTML -}}
+            {{- end -}}
+        </div>
+    {{- end -}}
+
     {{- if $profile.social -}}
         <div class="links">
             {{- $socialMap := resources.Get "data/social.yml" | transform.Unmarshal -}}

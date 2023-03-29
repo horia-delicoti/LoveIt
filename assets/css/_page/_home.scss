@@ -9,7 +9,7 @@
 
       img {
         display: inline-block;
-        width: 8rem;
+        width: 15rem;
         height: auto;
         margin: 0 auto;
         @include border-radius(100%);
@@ -31,6 +31,13 @@
     }
 
     .home-subtitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0;
+      padding: .5rem;
+    }
+
+    .home-subtitle1 {
       font-size: 1rem;
       font-weight: normal;
       margin: 0;
