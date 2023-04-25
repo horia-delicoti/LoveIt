@@ -8,6 +8,9 @@
         <meta name="robots" content="noodp" />
         <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
+        {{/* Plausible Analytics */}}
+        <script defer data-domain="horia.delicoti.com" src="https://plausible.io/js/script.js"></script>
+
         {{- partial "head/meta.html" . -}}
         {{- partial "head/link.html" . -}}
         {{- partial "head/seo.html" . -}}
